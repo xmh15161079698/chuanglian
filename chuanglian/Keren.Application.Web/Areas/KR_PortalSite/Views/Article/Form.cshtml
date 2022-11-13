@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "文章信息表单";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+@Html.AppendCssFile("/Areas/KR_PortalSite/Views/Article/Form.css")
+<div class="kr-layout">
+    <div class="kr-layout-wrap kr-form-wrap" style="padding-top:106px;" id="form1">
+        <input id="F_ImgName" type="hidden" />
+        <input id="F_Img" type="hidden" />
+        <div class="content">
+            <div class="col-xs-6 kr-form-item">
+                <div class="kr-form-item-title">标题<font face="宋体">*</font></div>
+                <input id="F_Title" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+            </div>
+            <div class="col-xs-6 kr-form-item">
+                <div class="kr-form-item-title">文章分类<font face="宋体">*</font></div>
+                <div id="F_Category" isvalid="yes" checkexpession="NotNull"></div>
+            </div>
+            <div class="col-xs-6 kr-form-item">
+                <div class="kr-form-item-title">发布时间<font face="宋体">*</font></div>
+                <input id="F_PushDate" type="text" class="form-control kr-input-wdatepicker" value="@Keren.Util.Time.GetToday()" onfocus="WdatePicker({onpicked: function () { $('#F_PushDate').trigger('change'); } })" isvalid="yes" checkexpession="NotNull" />
+            </div>
+            <div class="col-xs-6 kr-form-item kr-form-btnitem">
+                <div class="kr-form-item-title">缩略图</div>
+                <div id="F_ImgName1" class="form-control imgname"></div>
+                <div class="btn btn-default kr-form-item-btn">
+                    图片上传
+                    <input type="file" class="btn btn-default kr-form-item-btn file" name="uploadFile" id="uploadFile">
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-12 kr-form-item" style="position:relative;width:100%;height:100%;padding-bottom:130px;">
+            <div class="kr-form-item-title">详细内容<font face="宋体">*</font></div>
+            <div id="F_Content" type="text/plain" class="kr-rblock"></div>
+        </div>
+
+
+        <div>
+            <span id="closebutton" class="closebutton">×</span>
+            <div id="showimg" class="mask">
+            </div>
+        </div>
+    </div>
+    <div class="top-btn-tool">
+        <a id="savaAndAdd" class="btn btn-success">保存</a>
+        <a id="save" class="btn btn-default">取消</a>
+    </div>
+</div>
+@Html.AppendJsFile("/Views/KR_Content/script/kr-fileupload.js", "/Areas/KR_PortalSite/Views/Article/Form.js")

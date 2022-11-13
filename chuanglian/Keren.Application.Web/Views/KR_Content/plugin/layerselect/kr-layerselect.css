@@ -1,0 +1,50 @@
+﻿/*
+ * 版 本 keren-ADMS V7.0.6 可人敏捷开发框架
+ * Copyright (c) 2015-2020 成都可人软件有限公司
+ * 创建人：可人-前端开发组
+ * 日 期：2019.04.09
+ * 描 述：弹层选择控件
+ */
+.kr-layerselect {
+    position: relative;
+    width: 100%;
+    height: 28px;
+    line-height: 26px;
+    border: 1px solid #ccc;
+    padding-left: 4px;
+    cursor: pointer;
+    color: #999;
+}
+
+    .kr-layerselect.selected {
+        color: #000;
+    }
+
+    .kr-layerselect > i {
+        position: absolute;
+        top: 8px;
+        right: 2px;
+        font-size: 12px;
+        color: #666;
+    }
+
+    .kr-layerselect .clear-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 40px;
+        background-color: #ccc;
+        text-align: center;
+        display: none;
+    }
+        .kr-layerselect .clear-btn:hover {
+            color: #666;
+        }
+.kr-layerselect:hover > i {
+    display: none;
+}
+
+.kr-layerselect:hover .clear-btn {
+    display: block;
+}

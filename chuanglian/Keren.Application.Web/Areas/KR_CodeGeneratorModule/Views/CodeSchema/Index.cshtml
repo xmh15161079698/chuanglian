@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "代码模板";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+<div class="kr-layout kr-layout-left-center"  id="kr_layout"   >
+    <div class="kr-layout-left">
+        <div class="kr-layout-wrap">
+            <div class="kr-layout-title krlg ">模板分类</div>
+            <div id="dataTree" class="kr-layout-body"></div>
+        </div>
+    </div>
+    <div class="kr-layout-center">
+        <div class="kr-layout-wrap  ">
+            <div class="kr-layout-title">
+                <span id="titleinfo" class="krlg">模板列表</span>
+            </div>
+            <div class="kr-layout-tool">
+                <div class="kr-layout-tool-left">
+                    <div class="kr-layout-tool-item">
+                        <input id="F_Name" type="text" class="form-control" placeholder="请输入模板名称" />
+                    </div>
+                    <div class="kr-layout-tool-item">
+                        <a id="btn_Search" class="btn btn-primary btn-sm"><i class="fa fa-search"></i>&nbsp;<span class="krlg">查询</span></a>
+                    </div>
+                </div>
+                
+                <div class="kr-layout-tool-right">
+                    <div class=" btn-group btn-group-sm">
+                        <a id="kr_refresh" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                    </div>
+                    <div class=" btn-group btn-group-sm" keren-authorize="yes">
+                        <a id="kr_edit" class="btn btn-default"><i class="fa fa-pencil-square-o"></i>&nbsp;加载模板</a>
+                        <a id="kr_delete" class="btn btn-default"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+                    </div>
+                </div>
+            </div>
+            <div class="kr-layout-body" id="gridtable"></div>
+        </div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_CodeGeneratorModule/Views/CodeSchema/Index.js")

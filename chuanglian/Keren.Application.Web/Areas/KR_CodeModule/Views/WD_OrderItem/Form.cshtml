@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "订单详情";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="kr-form-wrap" id="form">
+    <div class="col-xs-12 kr-form-item"  data-table="WD_Order_Item" >
+        <div class="kr-form-item-title">订单编号<font face="宋体">*</font></div>
+        <input id="F_Order_Id" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_Order_Item" >
+        <div class="kr-form-item-title">用户编号<font face="宋体">*</font></div>
+        <input id="F_User_Id" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_Order_Item" >
+        <div class="kr-form-item-title">商品编号<font face="宋体">*</font></div>
+        <input id="F_Goods_Id" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_Order_Item" >
+        <div class="kr-form-item-title">商品名称<font face="宋体">*</font></div>
+        <input id="F_Goods_Name" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_Order_Item" >
+        <div class="kr-form-item-title">商品图<font face="宋体">*</font></div>
+        <input id="F_Goods_ImageAddr" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_Order_Item" >
+        <div class="kr-form-item-title">单价<font face="宋体">*</font></div>
+        <input id="F_CurrentUnitPrice" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_Order_Item" >
+        <div class="kr-form-item-title">购买数量<font face="宋体">*</font></div>
+        <input id="F_Goods_Amount" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_Order_Item" >
+        <div class="kr-form-item-title">总金额<font face="宋体">*</font></div>
+        <input id="F_TotalPrice" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_Order_Item" >
+        <div class="kr-form-item-title">下单时间<font face="宋体">*</font></div>
+        <input id="F_CreateTime" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_CodeModule/Views/WD_OrderItem/Form.js")

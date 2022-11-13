@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "移动端桌面设置";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+<script src="~/Content/echarts/echarts.min.js"></script>
+@Html.AppendCssFile("/Areas/KR_Desktop/Views/DTSetting/AppIndex.css")
+
+<div class="kr-rblock" style="padding:10px;">
+    <div class="kr-rblock" style="border:1px solid #ccc;background-color:#fff;padding:5px;" id="appContent">
+        <div class="phone">
+            <div class="content">
+                <div class="kr-black-panel">
+                    <div class="kr-title">统计数据</div>
+                    <div class="kr-content kr-flex-content">
+                        <div class="targetItem addItem" id="kr-add-target">
+                            <i class="fa fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kr-black-panel kr-black-addbtn" id="kr-add-list">
+                    <i class="fa fa-plus"></i>添加消息列表
+                </div>
+
+                <div class="kr-black-panel kr-black-addbtn" id="kr-add-chart">
+                    <i class="fa fa-plus"></i>添加图表
+                </div>
+
+            </div>
+            <div class="statusbar"></div>
+        </div>
+    </div>
+</div>
+
+@Html.AppendJsFile("/Areas/KR_Desktop/Views/DTSetting/AppIndex.js")
+

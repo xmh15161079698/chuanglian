@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "色卡管理";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="kr-form-wrap" id="form">
+    <div class="col-xs-12 kr-form-item"  data-table="WD_ColorCard" >
+        <div class="kr-form-item-title">色卡名称<font face="宋体">*</font></div>
+        <input id="F_ColorCard_Name" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_ColorCard" >
+        <div class="kr-form-item-title">类别编号<font face="宋体">*</font></div>
+        <div id="F_Type_Id" isvalid="yes" checkexpession="NotNull" ></div>
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_ColorCard" >
+        <div class="kr-form-item-title">图片</div>
+        <div id="F_ColorCard_Img"  ></div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_CodeModule/Views/WD_ColorCard/Form.js")

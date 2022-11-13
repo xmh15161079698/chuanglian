@@ -1,0 +1,537 @@
+﻿/*
+ * 版 本 keren-ADMS V7.0.6 可人敏捷开发框架
+ * Copyright (c) 2015-2020 成都可人软件有限公司
+ * 创建人：可人-前端开发组
+ * 日 期：2019.03.16
+ * 描 述：页面顶层框架通用样式表
+ */
+/*背景页*/
+.InternetExplorer .pace,
+.IE .pace {
+    display: none;
+}
+
+.kr-loadbg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+/*数据加载条*/
+.kr-loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 29891015;
+    cursor: wait;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.kr-loading-bar-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.0;
+    filter: alpha(opacity=00);
+    background: #fff;
+}
+
+.kr-loading-bar-message {
+    position: relative;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+    color: #666;
+    font-size: 20px;
+    border: 1px solid #bbb;
+    width: 300px;
+    height: 80px;
+    line-height: 78px;
+    padding-left: 80px;
+    padding-right: 20px;
+    background: #fff;
+    border-radius: 8px;
+    background-image: url(/Content/images/loading.gif);
+    background-repeat: no-repeat;
+    background-position: 8px 50%;
+    box-shadow: 0 1px 15px rgba(0,0,0,.175);
+    margin: auto;
+    margin-top: -40px;
+}
+/* =============
+   Notification
+============= */
+#toast-container {
+    z-index: 198910188;
+}
+
+#toast-container > div {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    opacity: 1;
+}
+
+#toast-container > :hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    opacity: 1;
+}
+
+.toast {
+    background-color: #64b0f2;
+}
+
+.toast-success {
+    background-color: #1bb99a;
+    border: 2px solid #1bb99a;
+}
+
+.toast-error {
+    background-color: #ff3015;
+    border: 2px solid #ff3015;
+}
+
+.toast-info {
+    background-color: #3db9dc;
+    border: 2px solid #3db9dc;
+}
+
+.toast-warning {
+    background-color: #f1b53d;
+    border: 2px solid #f1b53d;
+}
+
+.alerts-demo {
+    background-color: #f7f7f9;
+    border: 1px solid #eceeef;
+    padding: 20px;
+}
+
+.progress-sm {
+    height: 0.7rem;
+}
+
+.progress-xs {
+    height: 0.4rem;
+}
+
+label {
+    font-weight: 500;
+}
+
+.input-group-addon {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+
+/*界面风格设置*/
+.kr-theme-setting {
+    position: absolute;
+    top: 50%;
+    right: -160px;
+    z-index: 10;
+    width: 160px;
+    -webkit-transition: right 0.2s;
+    transition: right 0.2s;
+    border: 1px solid #dee5e7;
+    margin-top: -100px;
+}
+
+.kr-theme-setting.opened {
+    right: -1px;
+}
+
+.kr-theme-setting .btn {
+    position: absolute;
+    top: -1px;
+    left: -43px;
+    padding: 10px 15px;
+    background: #f6f8f8 !important;
+    border-color: #dee5e7 !important;
+    border-right-width: 0;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #58666e !important;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.kr-theme-setting .panel-heading {
+    color: #333;
+    border-color: #edf1f2;
+    background-color: #f6f8f8;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+.kr-theme-setting .panel-body {
+    background-color: #fff;
+    padding: 15px;
+    color: #58666e;
+}
+
+.kr-theme-setting .panel-body > div {
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.kr-theme-setting .panel-body label input {
+    position: absolute;
+    outline: none !important;
+    left: 0;
+    margin-top: 3px;
+}
+
+/*顶部*/
+.kr-frame-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 40px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+/*logo标题*/
+.kr-logo-title {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width:320px;
+    line-height: 0px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    white-space: nowrap;
+}
+.kr-logo-title img {
+    width:320px;
+}
+
+.kr-logo-title:hover {
+    color: #3498DB;
+}
+
+/*菜单*/
+.kr-frame-menu {
+    position: absolute;
+}
+
+.kr-frame-menu-wrap {
+    position: relative;
+    top: 0;
+    height: 100%;
+    overflow: visible;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+    .kr-frame-menu-wrap .kr-scroll-box {
+        overflow: visible;
+    }
+
+
+.kr-uitheme-default .kr-frame-menu-wrap {
+        top: -8px;
+    }
+
+.kr-frame-menu li {
+    position: relative;
+    width: 100%;
+    zoom: 1;
+}
+
+.kr-menu-item {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    overflow: hidden;
+}
+
+.kr-menu-item-icon {
+    font-size: 14px;
+    width: 25px;
+    vertical-align: middle;
+    margin-bottom: 1px;
+    opacity: .9;
+    filter: alpha(opacity=90);
+}
+.kr-uitheme-default .kr-menu-item-icon {
+    opacity:1;
+    filter: alpha(opacity=100);
+}
+.kr-uitheme-5 .kr-menu-item-icon {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.kr-second-menu-list, .kr-three-menu-list {
+    display: none;
+}
+/*tabs条*/
+.kr-frame-tabs {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+    padding: 0px 32px 0px 85px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+.kr-uitheme-default .kr-frame-tabs {
+    top: 60px;
+    left:0px;
+    padding: 0px 32px 0px 100px;
+
+}
+/*.kr-uitheme-5 .kr-frame-tabs {
+    top: 56px;
+    left: 0px;
+    padding: 0px 32px 0px 80px;
+}*/
+
+.kr-frame-tabs-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.kr-frame-tabs-wrap ul {
+    position: relative;
+    height: 100%;
+    white-space: nowrap;
+}
+
+
+.kr-frame-tabItem {
+    position: relative;
+    padding: 0px 20px 0px 15px;
+    margin-left: 5px;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.kr-uitheme-default .kr-frame-tabItem {
+    padding: 0px 10px 0px 10px;
+    margin-left: 0;
+
+}
+.kr-uitheme-5 .kr-frame-tabItem {
+    padding: 0px 10px 0px 10px;
+    margin-left: 0;
+}
+
+.kr-frame-tabItem .reomve {
+    position: absolute;
+    width: 12px;
+    height: 13px;
+    display: block;
+    background: url(/Content/images/tab_close.png) no-repeat;
+}
+
+/*炫动版  关闭icon换图片*/
+.kr-uitheme-windos .kr-frame-tabItem:hover .reomve {
+    display: inline-block;
+    background: url(/Content/images/tab_close.png) no-repeat;
+}
+.kr-uitheme-default .kr-frame-tabItem .reomve {
+    display: none;
+}
+
+.kr-uitheme-default .kr-frame-tabItem {
+    padding: 0px 18px 0px 12px;
+}
+.kr-uitheme-default .kr-frame-tabItem:hover .reomve {
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 5px;
+    width:13px;
+    height:13px;
+    background-position: 0px 0px;
+    background-size: 98%;
+}
+
+    .kr-uitheme-5 .kr-frame-tabItem .reomve {
+        display: none;
+    }
+
+.kr-uitheme-5 .kr-frame-tabItem {
+    padding: 0px 18px 0px 12px;
+}
+
+    .kr-uitheme-5 .kr-frame-tabItem:hover .reomve {
+        display: inline-block;
+        border-radius: 50%;
+        margin-left: 5px;
+        width: 13px;
+        height: 13px;
+        background-position: 0px 0px;
+        background-size: 98%;
+    }
+
+.kr-frame-tabItem .reomve:hover {
+    background-position: 0 -12px;
+}
+
+
+
+/*功能窗口*/
+.kr-frame-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.kr-uitheme-windos .kr-frame-main {
+    background: #F7FEFF;
+}
+.kr-uitheme-default .kr-frame-main {
+    background: #f8f8f8;
+}
+.kr-uitheme-5 .kr-frame-main {
+    background: #f8f8f8;
+}
+
+.kr-frame-main > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -300px;
+    z-index: -1;
+}
+
+/*功能窗口ifame*/
+.kr-frame-iframe {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.kr-frame-iframe.active {
+    display: block;
+}
+
+/*头像和个人中心*/
+.kr-frame-personCenter {
+    position: absolute;
+    z-index: 4;
+}
+
+.kr-frame-personCenter > a {
+    position: relative;
+    display: block;
+}
+.kr-uitheme-default .kr-frame-personCenter > .dropdown-toggle {
+    color: #333;
+}
+.kr-uitheme-5 .kr-frame-personCenter > .dropdown-toggle {
+    color: #fff;
+}
+.kr-uitheme-windos .kr-frame-personCenter > .dropdown-toggle {
+    color: #fff;
+}
+.kr-frame-personCenter > .dropdown-toggle > img {
+    float: left;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin: 7px 5px 0px 0px;
+}
+
+.kr-frame-personCenter .dropdown-menu > li > a {
+    padding: 5px 15px;
+    color: #333;
+}
+.kr-uitheme-windos .kr-frame-personCenter .dropdown-menu > li > a {
+    color: #333;
+}
+.kr-uitheme-default .kr-frame-personCenter .dropdown-menu > li > a {
+    color: #333;
+}
+.kr-uitheme-5 .kr-frame-personCenter .dropdown-menu > li > a {
+    color: #333;
+}
+
+.kr-frame-personCenter .dropdown-menu {
+    width: 120px;
+}
+.kr-uitheme-windos .kr-frame-personCenter .dropdown-menu {
+    border:1px solid transparent;
+    box-shadow: none;
+}
+
+dropdown-menu > li > a > .glyphicon,
+.dropdown-menu > li > a > .fa,
+.dropdown-menu > li > a > .ion {
+    margin-right: 10px;
+}
+
+.dropdown-menu i {
+    vertical-align: inherit;
+    margin-bottom: 3px;
+}
+/*全屏*/
+.kr_frame_fullscreen {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    height: 29px;
+    line-height: 29px;
+    z-index: 3;
+}
+
+.kr_frame_fullscreen a {
+    cursor: pointer;
+    color: #999;
+}
+
+.kr_frame_fullscreen a:hover {
+    color: #999;
+}
+
+
+
+/*即时通讯图标*/
+.kr-im-icon {
+    position: fixed;
+    z-index: 10;
+    bottom: 11px;
+    right: 13px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.kr-im-icon i {
+    color:#fff;
+    line-height: 35px;
+    font-size: 20px;
+}
+.kr-frame-main > img {
+    opacity: .15;
+}

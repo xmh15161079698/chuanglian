@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "任务日志";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+<div class="kr-layout">
+    <div class="kr-layout-center">
+        <div class="kr-layout-wrap kr-layout-wrap-notitle">
+            <div class="kr-layout-tool">
+                <div class="kr-layout-tool-left">
+                    <div class="kr-layout-tool-item">
+                        <div id="datesearch"></div>
+                    </div>
+                    <div class="kr-layout-tool-item">
+                        <div id="multiple_condition_query">
+                            <div class="kr-query-formcontent">
+                                <div class="col-xs-12 kr-form-item">
+                                    <div class="kr-form-item-title">任务名称</div>
+                                    <input id="keyword" type="text" class="form-control"/>
+                                </div>
+                                <div class="col-xs-12 kr-form-item">
+                                    <div class="kr-form-item-title">执行状态</div>
+                                    <div id="executeResult">
+                                    <ul>
+                                        <li data-value="1">成功</li>
+                                        <li data-value="2">失败</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kr-layout-tool-right">
+                    <div class=" btn-group btn-group-sm">
+                        <a id="kr_refresh" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="kr-layout-body" id="gridtable"></div>
+        </div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_TaskScheduling/Views/TSLog/Index.js")

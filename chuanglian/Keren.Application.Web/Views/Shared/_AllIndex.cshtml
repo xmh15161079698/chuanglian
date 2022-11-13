@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name=”renderer” content=”webkit|ie-comp|ie-stand” />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="icon" href="~/favicon.ico">
+
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/pace/pace-theme-loading-bar.css" rel="stylesheet" />
+    <link href="~/Content/font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/font/kerenfont/iconfont.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/jquery/plugin/toastr/toastr.css" rel="stylesheet" />
+    @Html.AppendCssFile(
+    "/Views/KR_Content/style/kr-common.css",
+    "/Views/KR_Content/plugin/scroll/scroll.css",
+    "/Views/KR_Content/style/kr-iframe-form.css",
+    "/Views/KR_Content/style/kr-layer.css",
+
+        "/Views/KR_Content/plugin/wizard/wizard.css",
+        "/Views/KR_Content/plugin/tree/kr-tree.css",
+        "/Views/KR_Content/plugin/select/kr-select.css",
+        "/Views/KR_Content/plugin/layerselect/kr-layerselect.css",
+        "/Views/KR_Content/plugin/timeline/kr-timeline.css",
+        "/Views/KR_Content/plugin/formselect/kr-formselect.css",
+        "/Views/KR_Content/plugin/inputsearch/kr-isearch.css",
+        "/Views/KR_Content/plugin/grid/jfgrid.css",
+        "/Views/KR_Content/plugin/uploader/kr-uploader.css",
+        "/Views/KR_Content/plugin/date/kr-datepicker.css"
+    )
+
+    <script src="~/Content/pace/pace.min.js"></script>
+    <script src="~/Content/jquery/jquery-1.10.2.min.js"></script>
+    <script src="~/Content/signalr/jquery.signalR-2.2.2.min.js"></script>
+    <script src="~/Content/ueditor/ueditor.config.js"></script>
+    <script src="~/Content/ueditor/ueditor.all.min.js"></script>
+    <script src="~/Content/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script src="~/Content/laydate/laydate.js"></script>
+    <!--[if lt IE 9]>
+      <script src="~/Content/bootstrap/html5shiv.min.js"></script>
+      <script src="~/Content/bootstrap/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        function request(d) { for (var c = location.search.slice(1).split("&"), a = 0; a < c.length; a++) { var b = c[a].split("="); if (b[0] == d) if ("undefined" == unescape(b[1])) break; else return unescape(b[1]) } return "" };
+    </script>
+</head>
+<body class="@Keren.Util.Net.Browser ">
+    <div id="kr_form_bg" class="kr-form-bg">
+    </div>
+    @RenderBody()
+
+
+
+    <script src="~/Content/bootstrap/bootstrap.min.js"></script>
+    <script src="~/Content/jquery/plugin/layer/layer.js"></script>
+    <script src="~/Content/jquery/plugin/jquery.cookie.min.js"></script>
+    <script src="~/Content/jquery/jquery.md5.min.js"></script>
+    <script src="~/Content/jquery/plugin/toastr/toastr.min.js"></script>
+
+    <script>
+        $.rootUrl = '@Url.Content("~")'.substr(0, '@Url.Content("~")'.length - 1);
+    </script>
+    @Html.AppendJsFile(
+    )
+
+
+    @Html.AppendJsFile(
+    "/Views/KR_Content/plugin/resize/resize.js",
+    "/Views/KR_Content/plugin/mousewheel/mousewheel.js",
+
+    "/Views/KR_Content/script/kr-base.js",
+    "/Views/KR_Content/plugin/scroll/scroll.js",
+
+    "/Views/KR_Content/script/kr-tabs.js",
+    "/Views/KR_Content/script/kr-date.js",
+    "/Views/KR_Content/script/kr-validator-helper.js",
+    "/Views/KR_Content/script/kr-layer.js",
+    "/Views/KR_Content/script/kr-ajax.js",
+
+    "/Views/KR_Content/plugin/tree/kr-tree.js",
+    "/Views/KR_Content/plugin/select/kr-select.js",
+    "/Views/KR_Content/script/kr-validator.js",
+    "/Views/KR_Content/script/kr-form.js",
+    "/Views/KR_Content/plugin/wizard/wizard.js",
+    "/Views/KR_Content/plugin/layerselect/kr-layerselect.js",
+    "/Views/KR_Content/plugin/timeline/kr-timeline.js",
+    "/Views/KR_Content/plugin/formselect/kr-formselect.js",
+    "/Views/KR_Content/plugin/uploader/kr-uploader.js",
+    "/Views/KR_Content/plugin/date/kr-datepicker.js",
+    "/Views/KR_Content/plugin/grid/jfgrid.js"
+    )
+
+    <script>
+        $(function () {
+            $('#kr_form_bg').fadeOut();
+            $('#form').krscroll();
+            if (!!window.bootstrap) {
+                bootstrap(jQuery, keren);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+

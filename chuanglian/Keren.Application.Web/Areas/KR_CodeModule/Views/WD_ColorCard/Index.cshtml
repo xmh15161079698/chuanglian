@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "色卡管理";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+<div class="kr-layout "  >
+    <div class="kr-layout-center">
+        <div class="kr-layout-wrap kr-layout-wrap-notitle ">
+            <div class="kr-layout-tool">
+                <div class="kr-layout-tool-left">
+                </div>
+                <div class="kr-layout-tool-right">
+                    <div class=" btn-group btn-group-sm">
+                        <a id="kr_refresh" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                    </div>
+                    <div class=" btn-group btn-group-sm" Keren-authorize="yes">
+                        <a id="kr_add"   class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;新增</a>
+                        <a id="kr_edit"  class="btn btn-default"><i class="fa fa-pencil-square-o"></i>&nbsp;编辑</a>
+                        <a id="kr_delete" class="btn btn-default"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+                        <a id="kr_print"   class="btn btn-default"><i class="fa fa-print"></i>&nbsp;打印</a>
+                    </div>
+                </div>
+            </div>
+            <div class="kr-layout-body" id="gridtable"></div>
+        </div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_CodeModule/Views/WD_ColorCard/Index.js")

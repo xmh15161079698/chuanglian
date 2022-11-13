@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "用户信息";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="kr-form-wrap" id="form">
+    <div class="col-xs-12 kr-form-item"  data-table="WD_User" >
+        <div class="kr-form-item-title">昵称<font face="宋体">*</font></div>
+        <input id="F_NickName" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_User" >
+        <div class="kr-form-item-title">性别<font face="宋体">*</font></div>
+        <div id="F_Gender" isvalid="yes" checkexpession="NotNull" ></div>
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_User" >
+        <div class="kr-form-item-title">电话<font face="宋体">*</font></div>
+        <input id="F_Phone" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_User" >
+        <div class="kr-form-item-title">头像<font face="宋体">*</font></div>
+        <input id="F_AvatarUrl" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_CodeModule/Views/WD_User/Form.js")

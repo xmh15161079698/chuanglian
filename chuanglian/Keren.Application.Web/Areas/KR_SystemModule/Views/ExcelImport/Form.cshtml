@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "导入配置";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+@Html.AppendCssFile("/Areas/KR_SystemModule/Views/ExcelImport/Form.css")
+<div class="kr-form-layout">
+    <div class="kr-form-layout-left1">
+        <div class="kr-form-layout-title">
+            数据库表
+        </div>
+        <div class="kr-form-layout-body" id="kr_dbtree">
+
+        </div>
+    </div>
+    <div class="kr-form-layout-left2">
+        <div class="kr-form-layout-title">
+            数据表字段
+        </div>
+        <div class="kr-form-layout-body" id="kr_filedtree">
+
+        </div>
+    </div>
+    <div class="kr-form-layout-center">
+        <div class="kr-form-layout-title">
+            导入配置区域
+        </div>
+        <div class="kr-form-layout-header">
+            <input id="F_ModuleId" type="hidden" />
+            <div class="col-xs-4 kr-form-item">
+                <div class="kr-form-item-title">模板名称<font face="宋体">*</font></div>
+                <input id="F_Name" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+            </div>
+            <div class="col-xs-4 kr-form-item">
+                <div class="kr-form-item-title">绑定按钮<font face="宋体">*</font></div>
+                <div id="F_ModuleBtnId" isvalid="yes" checkexpession="NotNull"></div>
+            </div>
+            <div class="col-xs-4 kr-form-item">
+                <div class="kr-form-item-title">错误机制<font face="宋体">*</font></div>
+                <div id="F_ErrorType" isvalid="yes" checkexpession="NotNull">
+                    <ul>
+                        <li data-value="1">跳过</li>
+                        <li data-value="0">终止</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-form-layout-body" id="gridtable"></div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_SystemModule/Views/ExcelImport/Form.js")
+

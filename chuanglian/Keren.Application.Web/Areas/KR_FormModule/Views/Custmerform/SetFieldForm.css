@@ -1,0 +1,33 @@
+﻿body {
+    padding:5px;
+}
+.kr-form-layout {
+    padding-top:210px;
+}
+.kr-form-layout-header {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 210px;
+    padding: 10px;
+    border:1px solid #ccc;
+    z-index:2;
+}
+.kr-form-item-title {
+    width:58px;
+    padding-right:0px;
+    text-align:left;
+}
+.kr-form-item {
+    padding-left:58px;
+}
+.kr-form-layout-body
+{
+    padding-top:30px;
+    border:1px solid #ccc;
+    border-top:0px;
+}
+.data-edit-select,data-edit-fixedInfo {
+    display:none;
+}

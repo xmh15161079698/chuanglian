@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "SetTextForm";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="kr-form-wrap" id="form">
+    <div class="col-xs-12 kr-form-item" style="padding-left:30px;">
+        <input id="text" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_PortalSite/Views/HomeConfig/SetTextForm.js")
+

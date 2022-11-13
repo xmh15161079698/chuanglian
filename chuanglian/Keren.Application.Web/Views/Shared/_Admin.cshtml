@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name=”renderer” content=”webkit|ie-comp|ie-stand” />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="icon" href="~/favicon.ico">
+
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/pace/pace-theme-loading-bar.css" rel="stylesheet" />
+    <link href="~/Content/font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/font/kerenfont/iconfont.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/jquery/plugin/toastr/toastr.css" rel="stylesheet" />
+    @Html.AppendCssFile(
+    "/Views/KR_Content/style/kr-common.css",
+    "/Views/KR_Content/plugin/scroll/scroll.css",
+    "/Views/KR_Content/style/kr-admin.css",
+    "/Views/KR_Content/style/kr-layer.css",
+    "/Views/KR_Content/plugin/contextmenu/kr-contextmenu.css",
+    "/Views/KR_Content/plugin/tree/kr-tree.css",
+    "/Views/KR_Content/plugin/select/kr-select.css"
+    )
+
+    <script src="~/Content/pace/pace.min.js"></script>
+    <script src="~/Content/jquery/jquery-1.10.2.min.js"></script>
+    <script src="~/Content/signalr/jquery.signalR-2.2.2.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="~/Content/bootstrap/html5shiv.min.js"></script>
+      <script src="~/Content/bootstrap/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        function request(d) { for (var c = location.search.slice(1).split("&"), a = 0; a < c.length; a++) { var b = c[a].split("="); if (b[0] == d) if ("undefined" == unescape(b[1])) break; else return unescape(b[1]) } return "" };
+    </script>
+</head>
+<body class="@Keren.Util.Net.Browser ">
+    <div class="kr-loadbg" id="kr_loadbg"></div>
+    @RenderBody()
+    <div class="kr-frame-menu"><div class="kr-frame-menu-wrap" id="kr_frame_menu"></div></div>
+    <div class="kr-frame-tabs">
+        <div class="kr-frame-tabs-wrap">
+            <ul id="kr_frame_tabs_ul"></ul>
+        </div>
+    </div>
+    <div class="kr-frame-main" id="kr_frame_main">
+    <img src="~/Content/images/iframebg.png"/>
+    </div>
+
+   
+    <script src="~/Content/bootstrap/bootstrap.min.js"></script>
+    <script src="~/Content/jquery/plugin/layer/layer.js"></script>
+    <script src="~/Content/jquery/plugin/jquery.cookie.min.js"></script>
+    <script src="~/Content/jquery/jquery.md5.min.js"></script>
+    <script src="~/Content/jquery/plugin/toastr/toastr.min.js"></script>
+
+    <script>
+        $.rootUrl = '@Url.Content("~")'.substr(0, '@Url.Content("~")'.length - 1);
+    </script>
+    @Html.AppendJsFile(
+    "/Views/KR_Content/plugin/resize/resize.js",
+    "/Views/KR_Content/plugin/mousewheel/mousewheel.js",
+
+    "/Views/KR_Content/script/kr-base.js",
+    "/Views/KR_Content/plugin/scroll/scroll.js",
+
+    "/Views/KR_Content/script/kr-tabs.js",
+    "/Views/KR_Content/script/kr-date.js",
+    "/Views/KR_Content/script/kr-validator-helper.js",
+    "/Views/KR_Content/script/kr-layer.js",
+    "/Views/KR_Content/script/kr-ajax.js",
+    "/Views/KR_Content/script/kr-clientdata.js",
+    "/Views/KR_Content/script/kr-language.js",
+
+    "/Views/KR_Content/plugin/tree/kr-tree.js",
+    "/Views/KR_Content/plugin/select/kr-select.js",
+    
+
+    "/Views/KR_Content/plugin/workflow/kr-workflow-api.js",
+    "/Views/KR_Content/plugin/contextmenu/kr-contextmenu.js",
+    "/Views/KR_Content/script/kr-im.js",
+            
+    "/Views/KR_Content/script/kr-admin.js"
+    )
+</body>
+</html>
+
+
+
+

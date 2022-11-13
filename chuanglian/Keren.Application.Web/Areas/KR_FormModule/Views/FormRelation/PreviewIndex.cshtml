@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "自定义表单功能";
+    Layout = "~/Views/Shared/_CustmerIndexPreview.cshtml";
+}
+<div class="kr-layout">
+    <div class="kr-layout-center">
+        <div class="kr-layout-wrap kr-layout-wrap-notitle">
+            <div class="kr-layout-tool">
+                <div class="kr-layout-tool-left">
+                    <div class="kr-layout-tool-item">
+                        <div id="datesearch"></div>
+                    </div>
+                    <div class="kr-layout-tool-item" id="multiple_condition_query_item">
+                        
+                    </div>
+                </div>
+                <div class="kr-layout-tool-right">
+                    <div class=" btn-group btn-group-sm">
+                        <a id="kr_refresh" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                    </div>
+                    <div class=" btn-group btn-group-sm" keren-authorize="yes">
+                        <a id="kr_add" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;<span class="krlg">新增</span></a>
+                        <a id="kr_edit" class="btn btn-default"><i class="fa fa-pencil-square-o"></i>&nbsp;<span class="krlg">编辑</span></a>
+                        <a id="kr_delete" class="btn btn-default"><i class="fa fa-trash-o"></i>&nbsp;<span class="krlg">删除</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kr-layout-body" id="gridtable"></div>
+        </div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_FormModule/Views/FormRelation/PreviewIndex.js")
+

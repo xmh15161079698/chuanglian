@@ -1,0 +1,35 @@
+﻿.kr-wrap {
+    width:300px;
+    position:relative;
+}
+.kr-wrap .text
+{
+    margin-top: 30px; 
+    line-height: 14px; 
+    color: #75777A;
+    text-align: center;
+}
+.kr-wrap .text div {
+    margin-top:10px;
+}
+.kr-wrap .file {
+    width: 100px;
+    height: 100px;
+    margin:auto;
+    position:relative;
+    overflow: hidden;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer !important;
+}
+.kr-wrap img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 100px;
+    cursor:pointer;
+}

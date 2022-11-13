@@ -1,0 +1,35 @@
+﻿/*
+ * 版 本 keren-ADMS V7.0.6 可人敏捷开发框架
+ * Copyright (c) 2015-2020 成都可人软件有限公司
+ * 创建人：可人-前端开发组
+ * 日 期：2019.05.24
+ * 描 述：kr-uploader 是对百度webuploader的封装
+ */
+
+.krUploader-wrap {
+    position:relative;
+    height:30px;
+    width:100%;
+    padding-right:178px;
+}
+
+.krUploader-input {
+    position:relative;
+    height:100%;
+    line-height:28px;
+    width:100%;
+    border:1px solid #ccc;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    padding-left:10px;
+}
+.krUploader-btn-group {
+    position:absolute;
+    top:0;
+    right:0;
+}
+.krUploader-input-btn {
+    padding:4px 12px; 
+    margin-left:5px;
+}

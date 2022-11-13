@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "图片地址";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="kr-form-wrap" id="form">
+    <div class="col-xs-12 kr-form-item"  data-table="WD_GoodsImg" >
+        <div class="kr-form-item-title">图片上传</div>
+        <div id="F_ImageAddress"  ></div>
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_GoodsImg" >
+        <div class="kr-form-item-title">商品编号<font face="宋体">*</font></div>
+        <div id="F_Goods_Id" isvalid="yes" checkexpession="NotNull" ></div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_CodeModule/Views/WD_GoodsImg/Form.js")

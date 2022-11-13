@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name=”renderer” content=”webkit|ie-comp|ie-stand” />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="icon" href="~/favicon.ico">
+
+    <title>鱼台龙虾节后台管理系统</title>
+    <link href="~/Content/font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+    @Html.AppendCssFile(
+            "/Views/KR_Content/style/kr-common.css",
+            "/Views/KR_Content/plugin/scroll/scroll.css",
+            "/Views/Home/DesktopAccordion/index.css")
+    <!--[if lt IE 9]>
+      <script src="~/Content/bootstrap/html5shiv.min.js"></script>
+      <script src="~/Content/bootstrap/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="~/Content/jquery/jquery-1.10.2.min.js"></script>
+    <script src="~/Content/echarts/echarts.min.js"></script>
+</head>
+<body class="@Keren.Util.Net.Browser ">
+    <div class="kr-desktop-panel">
+        <div class="kr-desktop-panel-left" id="kr_desktop_list">
+        </div>
+        <div class="kr-desktop-panel-right">
+
+            <div class="kr-desktop-target">
+                <div class="title">统计指标</div>
+                <div class="content" id="kr_target_content">
+
+                </div>
+            </div>
+            <div class="kr-desktop-chat">
+                <div class="kr-desktop-chat-panel">
+                    <div class="kr-desktop-chat-panel-title">
+                    </div>
+                    <div class="kr-desktop-chat-panel-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.AppendJsFile(
+         "/Views/KR_Content/plugin/resize/resize.js",
+            "/Views/KR_Content/plugin/mousewheel/mousewheel.js",
+            "/Views/KR_Content/plugin/scroll/scroll.js",
+        "/Views/Home/DesktopAccordion/index.js")
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

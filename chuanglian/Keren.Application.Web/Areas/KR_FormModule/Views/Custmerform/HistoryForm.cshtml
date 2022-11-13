@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "表单模板历史记录管理";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+@Html.AppendCssFile("/Areas/KR_SystemModule/Views/DataItem/ClassifyIndex.css")
+<div class="kr-layout">
+    <div class="kr-layout-center">
+        <div class="kr-layout-wrap kr-layout-wrap-notitle">
+            <div class="kr-layout-tool">
+                <div class="kr-layout-tool-right">
+                    <div class=" btn-group btn-group-sm">
+                        <a id="kr_refresh" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                    </div>
+                    <div class=" btn-group btn-group-sm">
+                        <a id="kr_preview" class="btn btn-default"><i class="fa fa-eye"></i>&nbsp;<span class="krlg">预览模板</span></a>
+                        <a id="kr_update" class="btn btn-default"><i class="fa fa-exchange"></i>&nbsp;<span class="krlg">更新到此版本</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="kr-layout-body" id="gridtable"></div>
+        </div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_FormModule/Views/Custmerform/HistoryForm.js")

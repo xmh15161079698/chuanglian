@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "商品管理";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="kr-form-wrap" id="form">
+    <div class="col-xs-12 kr-form-item" data-table="WD_Goods">
+        <div class="kr-form-item-title">商品类别<font face="宋体">*</font></div>
+        <div id="F_Goods_NameId" isvalid="yes" checkexpession="NotNull"></div>
+    </div>
+    <div class="col-xs-12 kr-form-item" data-table="WD_Goods">
+        <div class="kr-form-item-title">单价</div>
+        <input id="F_Goods_Price" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-12 kr-form-item" data-table="WD_Goods">
+        <div class="kr-form-item-title">库存</div>
+        <input id="F_Goods_Stocks" type="text" class="form-control" />
+    </div>
+    <div class="col-xs-12 kr-form-item" data-table="WD_Goods">
+        <div class="kr-form-item-title">开始时间</div>
+        <input id="F_FromDate" type="text" class="form-control kr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm',onpicked: function () { $('#F_FromDate').trigger('change'); } })" />
+    </div>
+    <div class="col-xs-12 kr-form-item" data-table="WD_Goods">
+        <div class="kr-form-item-title">截止时间</div>
+        <input id="F_ToDate" type="text" class="form-control kr-input-wdatepicker" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm',onpicked: function () { $('#F_ToDate').trigger('change'); } })" />
+    </div>
+    <div class="col-xs-12 kr-form-item" data-table="WD_Goods">
+        <div class="kr-form-item-title">颜色编号<font face="宋体">*</font></div>
+        <div id="F_Goods_ColorId" isvalid="yes" checkexpession="NotNull"></div>
+    </div>
+    <div class="col-xs-12 kr-form-item" data-table="WD_Goods">
+        <div class="kr-form-item-title">风格编号<font face="宋体">*</font></div>
+        <div id="F_Goods_StyleId" isvalid="yes" checkexpession="NotNull"></div>
+    </div>
+    <div class="col-xs-12 kr-form-item" data-table="WD_Goods">
+        <div class="kr-form-item-title">空间编号<font face="宋体">*</font></div>
+        <div id="F_Goods_SpaceId" isvalid="yes" checkexpession="NotNull"></div>
+    </div>
+    <div class="col-xs-12 kr-form-item" data-table="WD_Goods">
+        <div class="kr-form-item-title">商品色卡<font face="宋体">*</font></div>
+        <select id="F_Goods_ColorCardId" class="kr-select" style="outline:none">
+            
+        </select>
+    </div>
+    <div class="col-xs-12 kr-form-item" data-table="WD_Goods">
+        <div class="kr-form-item-title">商品详情</div>
+        <input id="F_Goods_Detail" type="text" class="form-control" />
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_CodeModule/Views/WD_Goods/Form.js"),
+@Html.AppendJsFile("/Content/js/goods_form.js")

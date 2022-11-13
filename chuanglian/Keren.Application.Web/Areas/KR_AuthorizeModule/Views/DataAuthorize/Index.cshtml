@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "数据权限";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+<div class="kr-layout kr-layout-left-center" id="kr_layout">
+    <div class="kr-layout-left">
+        <div class="kr-layout-wrap">
+            <div class="kr-layout-title krlg ">接口目录</div>
+            <div id="interface_tree" class="kr-layout-body"></div>
+        </div>
+    </div>
+    <div class="kr-layout-center">
+        <div class="kr-layout-wrap">
+            <div class="kr-layout-title">
+                <span class="krlg">数据权限信息</span> - <span id="titleinfo" class="krlg">未选择功能</span>
+            </div>
+            <div class="kr-layout-tool">
+                <div class="kr-layout-tool-left">
+                    <div class="kr-layout-tool-item">
+                        <input id="txt_Keyword" type="text" class="form-control" placeholder="请输入要查询关键字" />
+                    </div>
+                    <div class="kr-layout-tool-item">
+                        <a id="btn_Search" class="btn btn-primary btn-sm"><i class="fa fa-search"></i>&nbsp;<span class="krlg">查询</span></a>
+                    </div>
+                </div>
+                <div class="kr-layout-tool-right">
+                    <div class="btn-group btn-group-sm">
+                        <a id="kr_refresh" class="btn btn-default"><i class="fa fa-refresh"></i></a>
+                    </div>
+                    <div class="btn-group btn-group-sm" keren-authorize="yes">
+                        <a id="kr_add" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;<span class="krlg">新增</span></a>
+                        <a id="kr_edit" class="btn btn-default"><i class="fa fa-pencil-square-o"></i>&nbsp;<span class="krlg">编辑</span></a>
+                        <a id="kr_delete" class="btn btn-default"><i class="fa fa-trash-o"></i>&nbsp;<span class="krlg">删除</span></a>
+                    </div>
+                    <div class=" btn-group btn-group-sm" keren-authorize="yes">
+                        <a id="kr_interface" class="btn btn-default"><i class="fa fa-tags"></i>&nbsp;<span class="krlg">接口管理</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="kr-layout-body" id="gridtable"></div>
+        </div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_AuthorizeModule/Views/DataAuthorize/Index.js")

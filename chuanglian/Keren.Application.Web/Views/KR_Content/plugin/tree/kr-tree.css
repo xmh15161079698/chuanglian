@@ -1,0 +1,137 @@
+﻿/*
+ * 版 本 keren-ADMS V7.0.6 可人敏捷开发框架
+ * Copyright (c) 2015-2020 成都可人软件有限公司
+ * 创建人：可人-前端开发组
+ * 日 期：2019.03.16
+ * 描 述：树组件样式
+ */
+.kr-tree {
+    /*overflow-y: auto;*/
+}
+
+.kr-tree ul,
+.kr-tree li {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.kr-tree-icon,
+.kr-tree-ec-icon,
+.kr-tree-node-cb,
+.kr-tree-node-icon {
+    border: 0 none;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    margin-top: 3px;
+    vertical-align: top;
+    width: 16px;
+    background-repeat: no-repeat;
+}
+.kr-tree-node-cb {
+    height: 16px;
+    padding: 2px;
+    margin-top: 4.5px;
+    margin-right: 5px;
+}
+
+ul.kr-tree-node-ct {
+    line-height: 0;
+    zoom: 1;
+}
+
+.kr-tree-node-expanded > .kr-tree-ec-icon {
+    background-image: url(/Content/images/kerentree/arrows.gif) !important;
+    background: transparent no-repeat -16px 0;
+}
+
+.kr-tree-node-expanded > .kr-tree-ec-icon:hover {
+    background: transparent no-repeat -48px 0;
+}
+
+.kr-tree-node-collapsed > .kr-tree-ec-icon {
+    background-image: url(/Content/images/kerentree/arrows.gif) !important;
+    background: transparent no-repeat 0px 0;
+}
+
+.kr-tree-node-collapsed > .kr-tree-ec-icon:hover {
+    background: transparent no-repeat -32px 0;
+}
+
+.kr-tree-node {
+    white-space: nowrap;
+    color: #000;
+}
+
+.kr-tree-node {
+    color: #000;
+}
+
+.kr-tree-node i {
+    font-size: 13px;
+    width: 13px;
+    color: #666666;
+}
+
+.kr-tree-node a {
+    text-decoration: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+    -kthml-user-focus: normal;
+    -moz-user-focus: normal;
+    -moz-outline: 0 none;
+    outline: 0 none;
+}
+
+.kr-tree-node a span {
+    text-decoration: none;
+    padding: 1px 3px 1px 2px;
+}
+
+.kr-tree-node a:hover {
+    text-decoration: none;
+}
+
+    .kr-tree-node .kr-tree-selected {
+        background-color: #2F94EE !important;
+        color: #fff;
+    }
+
+.kr-tree-node .kr-tree-selected a span {
+    color: #fff;
+}
+
+.kr-tree-node .kr-tree-selected i {
+    color: #fff;
+}
+
+.kr-tree-node-el {
+    position:relative;
+    line-height: 25px;
+    cursor: default;
+    cursor: pointer;
+}
+
+.kr-tree-node-el:hover {
+    background-color: #eee;
+}
+
+.kr-tree-loading {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    display:none;
+}
+.kr-tree-loading > img {
+    height: 14px;
+    width: 14px;
+}
+
+.kr-tree-node-expanded .fa-folder:before {
+    content: "\f07c";
+}

@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "商品类别";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+<div class="kr-form-wrap" id="form">
+    <div class="col-xs-12 kr-form-item"  data-table="WD_GoodsClass" >
+        <div class="kr-form-item-title">类别名<font face="宋体">*</font></div>
+        <input id="F_GoodsClass_Name" type="text" class="form-control" isvalid="yes" checkexpession="NotNull" />
+    </div>
+    <div class="col-xs-12 kr-form-item"  data-table="WD_GoodsClass" >
+        <div class="kr-form-item-title">上级编号<font face="宋体">*</font></div>
+        <div id="F_ParentId" isvalid="yes" checkexpession="NotNull" ></div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_CodeModule/Views/WD_GoodsClass/Form.js")

@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "PC端代码生成器";
+    Layout = "~/Views/Shared/_Index.cshtml";
+}
+@Html.AppendCssFile("/Areas/KR_CodeGeneratorModule/Views/TemplatePC/Index.css")
+<div class="kr-layout">
+    <div class="kr-layout-center">
+        <div class="kr-layout-wrap">
+            <div class="kr-cover-box">
+                <div class="kr-cover-img">
+                    <img class="kr-cover-img1" src="~/Content/images/codeGenerator/multitable0.png" />
+                    <img class="kr-cover-img2" src="~/Content/images/codeGenerator/multitable1.png" />
+
+                    <h4><span class="krlg">自定义开发模板</span></h4>
+                </div>
+                <div class="kr-cover-info">
+                    <small><span class="krlg">通过设置生成单表或多表的增删改查功能。</span></small>
+                </div>
+                <div class="kr-cover-button">
+                    <a class="btn btn-default" id="kr_custmerCode"><span class="krlg">配置</span></a>
+                </div>
+            </div>
+            <div class="kr-cover-box">
+                <div class="kr-cover-img">
+                    <img class="kr-cover-img1" src="~/Content/images/codeGenerator/singletable0.png" />
+                    <img class="kr-cover-img2" src="~/Content/images/codeGenerator/singletable1.png" />
+
+                    <h4><span class="krlg">快速开发模板</span></h4>
+                </div>
+                <div class="kr-cover-info">
+                    <small><span class="krlg">快速生成必要的类和页面。</span></small>
+                </div>
+                <div class="kr-cover-button">
+                    <a class="btn btn-default" id="kr_fastCode"><span class="krlg">配置</span></a>
+                </div>
+            </div>
+            <div class="kr-cover-box">
+                <div class="kr-cover-img">
+                    <img class="kr-cover-img1" src="~/Content/images/codeGenerator/serviceCode0.png" />
+                    <img class="kr-cover-img2" src="~/Content/images/codeGenerator/serviceCode1.png" />
+
+                    <h4><span class="krlg">实体生成模板</span></h4>
+                </div>
+                <div class="kr-cover-info">
+                    <small><span class="krlg">根据数据库快速生成实体类和映射类。</span></small>
+                </div>
+                <div class="kr-cover-button">
+                    <a class="btn btn-default" id="kr_entityCode"><span class="krlg">配置</span></a>
+                </div>
+            </div>
+           
+
+            <div class="kr-cover-box">
+                <div class="kr-cover-img">
+                    <img class="kr-cover-img1" src="~/Content/images/codeGenerator/edit0.png" />
+                    <img class="kr-cover-img2" src="~/Content/images/codeGenerator/edit1.png" />
+
+                    <h4><span class="krlg">EXCEl风格模板</span></h4>
+                </div>
+                <div class="kr-cover-info">
+                    <small><span class="krlg">通过设置生成编辑列表页。</span></small>
+                </div>
+                <div class="kr-cover-button">
+                    <a class="btn btn-default" id="kr_gridEditCode"><span class="krlg">配置</span></a>
+                </div>
+            </div>
+
+            <div class="kr-cover-box">
+                <div class="kr-cover-img">
+                    <img class="kr-cover-img1" src="~/Content/images/codeGenerator/report0.png" />
+                    <img class="kr-cover-img2" src="~/Content/images/codeGenerator/report1.png" />
+
+                    <h4><span class="krlg">报表模板</span></h4>
+                </div>
+                <div class="kr-cover-info">
+                    <small><span class="krlg">通过设置生成报表显示页。</span></small>
+                </div>
+                <div class="kr-cover-button">
+                    <a class="btn btn-default" id="kr_reportCode"><span class="krlg">配置</span></a>
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+</div>
+@Html.AppendJsFile("/Areas/KR_CodeGeneratorModule/Views/TemplatePC/Index.js")
