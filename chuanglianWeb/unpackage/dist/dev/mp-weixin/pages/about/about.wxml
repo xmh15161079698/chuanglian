@@ -1,0 +1,1 @@
+<view class="content data-v-92c79dbc"><block wx:if="{{post}}"><view class="zhuige-single-page data-v-92c79dbc"><mp-html vue-id="1cea7424-1" content="{{post.content}}" class="data-v-92c79dbc" bind:__l="__l"></mp-html></view></block></view>
